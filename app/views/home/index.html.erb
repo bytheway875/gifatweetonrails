@@ -1,0 +1,17 @@
+<%= form_tag home_index_url , method: :get do %>
+  <%= text_field_tag :user %>
+  <%= submit_tag %>
+<% end %>
+
+<% if @user %>
+  <%=@user%>
+  <%=@tweet.id%>
+  <%=@tweet.text%>
+  <%=@tweet_keywords%>
+  <% if !@gif_url %>
+    <p> Your tweet wasn't gif-worthy. Try again. </p>
+  <% else %> 
+    <%= image_tag @gif_url %>
+  <% end %>
+
+<% end %>
