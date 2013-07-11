@@ -11,3 +11,20 @@
  *= require_self
  *= require_tree .
  */
+
+
+
+html {
+  background-color: #51ffce;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.form {
+  margin: 0 auto;
+}
+
+h1 {
+  font-size:72px;
+  text-align:center;
+  color: #FFFFFF;
+}
