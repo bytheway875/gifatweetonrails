@@ -5,6 +5,7 @@ class HomeController < ApplicationController
     @user = params[:user]
     @tweet = get_random_tweet(@user)
     @tweet_keywords = get_tweet_keywords(@tweet)
+    @keywords = chosen_keywords(@tweet_keywords)
     @gif_url = get_gifs_with_retry(@tweet_keywords)
   end
 
@@ -41,9 +42,13 @@ private
 
   end
 
+  def chosen_keywords(tweet_keywords)
+    keywords = tweet_keywords.sample(2)
+  end
+
   def get_gif_url(tweet_keywords)
-    chosen_keywords = tweet_keywords.sample(2)
-    giphy_url = get_giffy_url(chosen_keywords)
+    keywords = chosen_keywords(tweet_keywords)
+    giphy_url = get_giffy_url(keywords)
     get_gif_from_giffy(giphy_url)
   end
 
