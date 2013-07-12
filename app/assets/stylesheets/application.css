@@ -138,6 +138,15 @@ a {
     top: 6px;
 }
 
+.handle {
+  color:#ffffff;
+  font-size:2em;
+}
+
+.small_handle{
+  color:#ffffff;
+  
+}
 img{
   border:5px solid #FFF;
 }

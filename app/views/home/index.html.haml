@@ -4,16 +4,20 @@
     .form
     .formy
       = form_tag home_index_url , method: :get do
-        = text_field_tag :user, nil, :placeholder =>"twitter handle", :class => "text_field_small"
-        %br
+        %p.small_handle
+          @
+          = text_field_tag :user, nil, :placeholder =>"twitter handle", :class => "text_field_small"
         = submit_tag "gif it", :class => "submit_small"
+        %br
   -else
     .header
       %h1 gif<span>-</span>a<span>-</span>tweet
       .form
         .formy
           = form_tag home_index_url , method: :get do
-            = text_field_tag :user, nil, :placeholder =>"twitter handle", :class => "text_field"
+            %p.handle 
+              @
+              =  text_field_tag :user, nil, :placeholder =>"twitter handle", :class => "text_field"
             = submit_tag "gif it", :class => "submit"
 
 
