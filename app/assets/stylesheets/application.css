@@ -12,19 +12,48 @@
  *= require_tree .
  */
 
-
+/*#f94f48 - redish pink
+#35c0fc - light blue*/
 
 html {
-  background-color: #51ffce;
+  background-color: #35c0fc;
   font-family: 'Ubuntu', sans-serif;
 }
 
-.form {
-  margin: 0 auto;
-}
 
 h1 {
-  font-size:72px;
+  font-size:100px;
   text-align:center;
   color: #FFFFFF;
+}
+
+.wrapper {
+  min-width: 960px;
+}
+
+.form {
+  margin-right: auto;
+  margin-left:auto;
+  width:400px;
+  height:100px;
+}
+
+.formy{
+  text-align:center;
+}
+
+input[type='text']{
+  height:30px;
+  background:#f94f48;
+  font-size:20px;
+  text-align:center;
+}
+
+input[type='submit']{
+  height:25px;
+  background:;
+}
+
+img{
+  border:5px solid #FFF;
 }

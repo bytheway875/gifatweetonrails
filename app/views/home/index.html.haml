@@ -1,17 +1,18 @@
-.wrapper
-  %h1 GIFATweet
-  -if @user
-    =@user
-    %h2=@tweet.text
-    =@tweet_keywords
-    %br
-    =@keywords
-    -if !@gif_url
-      %p Your tweet wasn't gif-worthy. Try again.
-    -else
-      = image_tag @gif_url
+%h1 GIFATweet
+-if @user
+  =@user
+  %h2=@tweet.text
+  =@tweet_keywords
+  %br
+  =@keywords
+  -if !@gif_url
+    %p Your tweet wasn't gif-worthy. Try again.
+  -else
+    = image_tag @gif_url
 
-  .form
-  =form_tag home_index_url , method: :get do
-    %div.text_field= text_field_tag :user
-    =submit_tag value = "GIF My Tweet"
+.form
+  .formy
+    = form_tag home_index_url , method: :get do
+      = text_field_tag :user
+      %br
+      = submit_tag value = "GIF My Tweet"
