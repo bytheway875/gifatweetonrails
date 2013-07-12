@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <div class = "wrapper">
   <title>Gifatweetonrails</title>
   <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class = "wrapper">
 
 <%= yield %>
+  <div class ="push"></div>
+</div>
+<div class = "footer">
+  <p> created by shannon byrne and silas rioux <br>
+    <!-- (design consultation by sagar patel.)  --></p>
 </div>
 </body>
 </html>

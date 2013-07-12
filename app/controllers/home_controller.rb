@@ -7,6 +7,7 @@ class HomeController < ApplicationController
     @tweet_keywords = get_tweet_keywords(@tweet)
     @keywords = chosen_keywords(@tweet_keywords)
     @gif_url = get_gifs_with_retry(@tweet_keywords)
+    @giphy_search = get_giffy_url(@keywords)
   end
 
 

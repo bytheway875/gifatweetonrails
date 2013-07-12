@@ -22,6 +22,7 @@ html {
 
 
 h1 {
+  padding-top:-100px;
   font-size:100px;
   text-align:center;
   color: #FFFFFF;
@@ -34,6 +35,7 @@ h1 {
 .form {
   margin-right: auto;
   margin-left:auto;
+  /*height:50px;*/
   width:400px;
 }
 
@@ -51,14 +53,38 @@ input[type='text']{
 }
 
 input[type='submit']{
- color: #fff;
- font-size: 0;
- width: 135px;
- height: 60px;
- border: none;
- margin: 0;
- padding: 0;
- background: #0c0 url(images/send-now.gif) 0 0 no-repeat; 
+ position: relative;
+    color: rgba(255,255,255,1);
+    text-decoration: none;
+    background-color: #f94f48;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 1em;
+    display: block;
+    padding: 4px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 9px 0px rgba(155,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+    -moz-box-shadow: 0px 9px 0px rgba(155,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+    box-shadow: 0px 9px 0px rgba(155,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+    margin: 20px auto;
+  width: 100px;
+  text-align: center;
+  
+  -webkit-transition: all .1s ease;
+  -moz-transition: all .1s ease;
+  -ms-transition: all .1s ease;
+  -o-transition: all .1s ease;
+  transition: all .1s ease;
+}
+
+input[type='submit']:active {
+    -webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    -moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    position: relative;
+    top: 6px;
 }
 
 img{
@@ -68,4 +94,34 @@ img{
 .user {
   text-align:center;
   font-size:30px;
+}
+
+.results {
+  text-align:center;
+  margin:0 auto;
+}
+.span{
+  color:#f94f48;
+}
+
+.footer p {
+  font-size:10px;
+  text-align:right;
+}
+
+.footer{
+  margin-bottom:0px;
+}
+
+html, body {
+height: 100%;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -1em;
+}
+.footer, .push {
+height: 2em;
 }

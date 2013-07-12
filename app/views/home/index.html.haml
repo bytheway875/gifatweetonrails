@@ -1,20 +1,29 @@
-%h1 GIF-a-Tweet
-
+%h1 gif<span>-</span>a<span>-</span>tweet
+  
 .form
   .formy
     = form_tag home_index_url , method: :get do
       = text_field_tag :user, nil, :placeholder =>"twitter handle"
       %br
-      = submit_tag "GIF My Tweet", :class => "submit"
+      = submit_tag "gif it", :class => "submit"
 
-.results
-  -if @user
-    %p.user= "@#{@user}"
-    %h2=@tweet.text
-    =@tweet_keywords
-    %br
-    =@keywords
-    -if !@gif_url
-      %p Your tweet wasn't gif-worthy. Try again.
-    -else
-      = image_tag @gif_url
+.wrapping
+  .results
+    -if @user
+      %h2= "@#{@user}:#{@tweet.text}"
+      -if !@gif_url
+        %p 
+          your tweet wasn't gif-worthy. 
+          try again.
+      -else
+        = image_tag @gif_url, height:'300', width: '400'
+        %br
+        = @giphy_search
+        %br
+      %br
+      -@keywords.each do  |keyword|
+        = "|#{keyword}|"
+
+%br 
+%br
+
