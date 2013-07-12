@@ -10,6 +10,11 @@ class HomeController < ApplicationController
     @giphy_search = get_giffy_url(@keywords)
   end
 
+  def show
+    @user =params[:user]
+
+  end
+
 
 private
 
@@ -44,12 +49,12 @@ private
   end
 
   def chosen_keywords(tweet_keywords)
-    keywords = tweet_keywords.sample(2)
+    @keywords = tweet_keywords.sample(2)
   end
 
   def get_gif_url(tweet_keywords)
-    keywords = chosen_keywords(tweet_keywords)
-    giphy_url = get_giffy_url(keywords)
+    @keywords = chosen_keywords(tweet_keywords)
+    giphy_url = get_giffy_url(@keywords)
     get_gif_from_giffy(giphy_url)
   end
 

@@ -1,16 +1,28 @@
-%h1 gif<span>-</span>a<span>-</span>tweet
-  
-.form
-  .formy
-    = form_tag home_index_url , method: :get do
-      = text_field_tag :user, nil, :placeholder =>"twitter handle"
-      %br
-      = submit_tag "gif it", :class => "submit"
+.header
+  -if params[:user]
+    %h1.small gif<span>-</span>a<span>-</span>tweet
+    .form
+    .formy
+      = form_tag home_index_url , method: :get do
+        = text_field_tag :user, nil, :placeholder =>"twitter handle", :class => "text_field_small"
+        %br
+        = submit_tag "gif it", :class => "submit_small"
+  -else
+    .header
+      %h1 gif<span>-</span>a<span>-</span>tweet
+      .form
+        .formy
+          = form_tag home_index_url , method: :get do
+            = text_field_tag :user, nil, :placeholder =>"twitter handle", :class => "text_field"
+            = submit_tag "gif it", :class => "submit"
+
+
 
 .wrapping
   .results
     -if @user
-      %h2= "@#{@user}:#{@tweet.text}"
+      %h2= "@#{@user}:"
+      %h2="#{@tweet.text}"
       -if !@gif_url
         %p 
           your tweet wasn't gif-worthy. 
@@ -18,7 +30,8 @@
       -else
         = image_tag @gif_url, height:'300', width: '400'
         %br
-        = @giphy_search
+        %br
+        = link_to "Giphy Results", @giphy_search
         %br
       %br
       -@keywords.each do  |keyword|
