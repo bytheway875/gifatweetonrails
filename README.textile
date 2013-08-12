@@ -1,0 +1,18 @@
+h1. Gif-A-Tweet
+
+Enter your twitter handle or the handle of a friend or foe. GifATweet will connect with the Twitter and Giphy APIs to generate a GIF related (sometimes dubiously) to your tweet.
+
+h3. Features
+
+Basic features include:
+
+* Twitter API Integration
+* Giphy API Integration
+* Regular Expressions
+
+h3. Planned Extensions:
+
+Planned extensions of this app to improve functionality include:
+
+* Update Stop Words list to include other common words that often come up as stop words
+* Create a list of "popular words" that produce great GIFS that will be given extra weight (or are always chosen) as keywords

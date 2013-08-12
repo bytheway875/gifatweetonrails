@@ -1,7 +1,0 @@
-Gif-A-Tweet:
-
-This app allows users to enter a twitter handle. The app will then choose a random tweet from the users timeline. Using regular expressions and a stop words list, all non-important words are removed, and two keywords from the remaining list of words remain. Those words are then used as search terms in an API request to Giphy.com.
-
-Planned extensions of this app to improve functionality:
-- Update Stop Words list to include other common words that often come up as stop words
-- Create a list of "popular words" that produce great GIFS that will be given extra weight (or are always chosen) as keywords
